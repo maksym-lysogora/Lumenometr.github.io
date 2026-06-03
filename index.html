@@ -54,7 +54,7 @@
   a { color: var(--green); text-decoration: none; transition: var(--transition); }
   a:hover { color: var(--green); }
 
-  /* ── LAYOUT ── */
+  /* LAYOUT */
   .container {
     display: flex;
     justify-content: center;
@@ -62,7 +62,7 @@
     position: relative;
   }
 
-  /* ── LEFT PANEL (sticky) ── */
+  /* LEFT PANEL (sticky) */
   .left-panel {
     position: fixed;
     top: 0;
@@ -189,7 +189,7 @@
     fill: currentColor;
   }
 
-  /* ── RIGHT PANEL (scrollable) ── */
+  /* RIGHT PANEL (scrollable) */
   .right-panel {
     flex: 0 0 912px;
     padding: 80px 60px 80px 80px;
@@ -222,7 +222,7 @@
     background: var(--navy-mid);
   }
 
-  /* ── ABOUT ── */
+  /* ABOUT */
   #about p {
     color: var(--slate);
     font-size: var(--fz-md);
@@ -235,7 +235,7 @@
     color: var(--slate-white);
   }
 
-  /* ── PROJECTS ── */
+  /* PROJECTS */
   .project-card {
     display: grid;
     grid-template-columns: 1fr;
@@ -393,6 +393,7 @@
   }
 
   .project-image-gallery img,
+  .project-image-gallery video,
   .project-diagram svg {
     width: 100%;
     height: auto;
@@ -402,7 +403,19 @@
     background: #0d1426;
   }
 
+  .project-image-gallery figure {
+    margin: 0;
+  }
+
+  .project-image-gallery figcaption {
+    margin-top: 8px;
+    color: var(--slate);
+    font-size: var(--fz-xs);
+    line-height: 1.5;
+  }
+
   .project-image-gallery img:hover,
+  .project-image-gallery video:hover,
   .project-diagram svg:hover {
     transform: scale(1.02);
     border-color: rgba(100,255,218,0.3);
@@ -416,7 +429,7 @@
     display: block;
   }
 
-  /* ── EXPERIENCE ── */
+  /* EXPERIENCE */
   .exp-item {
     display: grid;
     grid-template-columns: 120px 1fr;
@@ -483,7 +496,7 @@
     font-size: var(--fz-xxs);
   }
 
-  /* ── SKILLS ── */
+  /* SKILLS */
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -521,7 +534,7 @@
     font-size: 10px;
   }
 
-  /* ── CONTACT ── */
+  /* CONTACT */
   #contact {
     text-align: center;
     padding-bottom: 40px;
@@ -601,7 +614,7 @@
     color: var(--green);
   }
 
-  /* ── CURSOR GLOW ── */
+  /* CURSOR GLOW */
   .cursor-glow {
     pointer-events: none;
     position: fixed;
@@ -614,7 +627,7 @@
     transition: opacity 0.3s;
   }
 
-  /* ── SCROLL FADE IN ── */
+  /* SCROLL FADE IN */
   .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -626,7 +639,7 @@
     transform: none;
   }
 
-  /* ── RESPONSIVE ── */
+  /* RESPONSIVE */
   @media (max-width: 1080px) {
     .left-panel { position: relative; left: auto; width: 200px; min-width: 200px; padding: 60px 28px; }
     .right-panel { padding: 60px 40px 60px 60px; }
@@ -654,7 +667,7 @@
 
 <div class="container">
 
-  <!-- ── LEFT PANEL ── -->
+  <!-- LEFT PANEL -->
   <aside class="left-panel">
     <div class="left-top">
 
@@ -703,10 +716,14 @@
       <a class="social-link" href="mailto:maksymlysogora@gmail.com" title="Email">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-.9.732-1.636 1.636-1.636h.749L12 10.91l9.615-7.089h.749A1.636 1.636 0 0124 5.457z"/></svg>
       </a>
+      <!-- GitHub -->
+      <a class="social-link" href="https://github.com/maksym-lysogora" target="_blank" title="GitHub">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
     </div>
   </aside>
 
-  <!-- ── RIGHT PANEL ── -->
+  <!-- RIGHT PANEL -->
   <main class="right-panel">
 
     <!-- ABOUT -->
@@ -723,7 +740,7 @@
         That background gives me an unusual edge in AI: I understand entire systems, not just individual components. I translate messy real-world problems into working solutions.
       </p>
       <p class="fade-in">
-        Currently focused on <strong>LLM agent development</strong>, <strong>workflow automation</strong>, and <strong>AI integration</strong> using n8n, Claude, and OpenAI.
+        Currently focused on <strong>LLM agent development</strong>, <strong>workflow automation</strong>, <strong>AI integration</strong>, and custom AI interfaces for visual production.
       </p>
     </section>
 
@@ -736,6 +753,90 @@
         <div class="project-top">
           <svg class="folder-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
           <div class="project-links">
+            <a href="https://github.com/maksym-lysogora/archviz-ai-node-editor" target="_blank" title="GitHub">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+          </div>
+        </div>
+        <span class="project-badge">Alpha</span>
+        <h3 class="project-title">Collaba Render</h3>
+        <p class="project-desc">
+          Local-first node-based AI rendering interface for architectural visualization. Built a custom workflow editor that connects base renders, references, lighting, vegetation, people placement, prompt adaptation, Gemini/OpenAI generation, and inpaint corrections through a local backend.
+        </p>
+        <ul class="tech-list">
+          <li>JavaScript</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>OpenAI API</li>
+          <li>Gemini API</li>
+          <li>Node editor UX</li>
+          <li>Image editing</li>
+        </ul>
+        <div class="project-extended">
+          <p><strong>Project:</strong> Custom AI product prototype for controlled archviz image editing.</p>
+          <p><strong>Role:</strong> Product concept, UX direction, node workflow logic, prompt system design, frontend implementation, backend API integration, testing, and iteration.</p>
+          <p><strong>Core idea:</strong> Replace one long fragile prompt with a visual workflow where each node contributes a clear piece of production context.</p>
+
+          <h3>Workflow</h3>
+          <ol>
+            <li>Upload a base architectural render and optional depth/style/environment references.</li>
+            <li>Set lighting, season, weather, vegetation, furniture, and people-placement constraints.</li>
+            <li>Generate a structured English prompt through Prompt Adapter.</li>
+            <li>Send the controlled request to OpenAI or Gemini through a local Express backend.</li>
+            <li>Review, download, or correct selected areas with an inpaint node.</li>
+          </ol>
+          <h3>What I built</h3>
+          <ul>
+            <li>Interactive node canvas with draggable, collapsible, resizable, connected nodes.</li>
+            <li>Prompt Adapter with priority rules for geometry preservation, camera lock, lighting, vegetation, and user instructions.</li>
+            <li>Local API-key handling so secrets stay in backend/api_keys.env instead of frontend code.</li>
+            <li>Image compression before API calls to reduce cost and improve stability.</li>
+            <li>Generation history, presets, output preview, download, and masked inpaint correction flow.</li>
+          </ul>
+          <div class="project-image-gallery">
+            <figure>
+              <img src="media/project_3_collaba_render/02-concept-sketch.png" alt="Initial Collaba Render workflow sketch">
+              <figcaption>Initial workflow sketch: the product started as a visual map of inputs, prompt adaptation, model settings, output and inpaint correction.</figcaption>
+            </figure>
+            <figure>
+              <img src="media/project_3_collaba_render/default.png" alt="Default Collaba Render node graph">
+              <figcaption>Default node setup: source inputs, weather and vegetation controls, prompt generation, image edit and output.</figcaption>
+            </figure>
+            <figure>
+              <img src="media/project_3_collaba_render/05-prompt-adapter-closeup.png" alt="Prompt Adapter close-up in Collaba Render">
+              <figcaption>Prompt Adapter close-up: user intent and connected references are converted into a controlled image-editing prompt.</figcaption>
+            </figure>
+            <figure>
+              <img src="media/project_3_collaba_render/01-hero-workflow.png" alt="Collaba Render node workflow interface">
+              <figcaption>Working product interface: node graph, Prompt Adapter, Image Edit settings and Output node in one local workflow.</figcaption>
+            </figure>
+            <figure>
+              <img src="media/project_3_collaba_render/04-generated-result.png" alt="Collaba Render generated architectural visualization result">
+              <figcaption>Generated result inside the working build: OpenAI image generation with geometry preservation and reference-driven rendering.</figcaption>
+            </figure>
+            <figure>
+              <img src="media/project_3_collaba_render/collaba-render-output.png" alt="Final Collaba Render output image">
+              <figcaption>Final output image: a cleaned standalone render result suitable for client-facing visual review.</figcaption>
+            </figure>
+            <figure>
+              <video src="media/project_3_collaba_render/video2.mp4" controls muted loop playsinline></video>
+              <figcaption>Short demo of the rendering workflow: references, prompt adaptation, generation and output review.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card fade-in">
+        <div class="project-top">
+          <svg class="folder-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+          <div class="project-links">
+            <a href="https://github.com/maksym-lysogora/Twitter-Agent---Parabola-Human" target="_blank" title="GitHub">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+            <a href="https://x.com/ParabolaHuman" target="_blank" title="X / Twitter">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
           </div>
         </div>
         <span class="project-badge">Live</span>
@@ -753,12 +854,20 @@
         </ul>
         <div class="project-extended">
           <div class="loom-container">
-            <iframe src="https://www.loom.com/embed/9dfd2c4c13c34a66a4b36dc5c4fee949" allowfullscreen></iframe>
+            <video
+              src="https://maksym-lysogora.github.io/twitter_demo.mp4"
+              controls
+              autoplay
+              muted
+              loop
+              playsinline
+              style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:8px;background:#0d1426;"
+            ></video>
           </div>
           <aside>
-            🤖 AI content automation system with multi-step decision pipeline
+            AI content automation system with multi-step decision pipeline
           </aside>
-          <p><strong>Stack:</strong> Python · OpenAI API (GPT-4o-mini) · Telegram Bot API · Twitter API v2 · Tweepy · python-dotenv</p>
+          <p><strong>Stack:</strong> Python &middot; OpenAI API (GPT-4o-mini) &middot; Telegram Bot API &middot; Twitter API v2 &middot; Tweepy &middot; python-dotenv</p>
           <hr style="border: none; border-top: 1px solid rgba(100,255,218,0.1); margin: 20px 0;">
           <h3>Problem - Solution</h3>
           <p>Writing quality Twitter threads manually takes 30-60 min and requires constant context-switching. Instead of a simple single-prompt bot, I built a 6-step pipeline where each step has one responsibility - idea generation, LLM filtering, thread generation, self-scoring, user selection, and auto-publishing via API. Built modular: prompt in system_prompt.txt, secrets in .env, memory in memory.json.</p>
@@ -773,39 +882,17 @@
           </ol>
           <h3>Results</h3>
           <ul>
-            <li>Content creation time: 30-60 min → under 2 min</li>
+            <li>Content creation time: 30-60 min &rarr; under 2 min</li>
             <li>Live at @ParabolaHuman - 13 posts, 4 full threads published</li>
             <li>Built in 3-4 weeks while learning Python and APIs from scratch</li>
           </ul>
           <div class="project-image-gallery">
-            <img src="media/project_1/image1.png" alt="Project screenshot 1">
-            <img src="media/project_1/image2.png" alt="Project screenshot 2">
-            <img src="media/project_1/image3.png" alt="Project screenshot 3">
-            <img src="media/project_1/image4.png" alt="Project screenshot 4">
+            <img src="image1.png" alt="Project screenshot 1">
+            <img src="image2.png" alt="Project screenshot 2">
+            <img src="image3.png" alt="Project screenshot 3">
+            <img src="image4.png" alt="Project screenshot 4">
           </div>
         </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-card fade-in">
-        <div class="project-top">
-          <svg class="folder-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-          <div class="project-links"></div>
-        </div>
-        <span class="project-badge">Commercial - 63 projects</span>
-        <h3 class="project-title">AI Visual Production Pipeline</h3>
-        <p class="project-desc">
-          Replaced a 3-day manual architectural rendering process with a hybrid AI workflow - cut turnaround to under 6 hours per project. Tested and integrated multiple generative tools into a single production pipeline. 70% reduction in production time, 2-3x faster client iteration.
-        </p>
-        <ul class="tech-list">
-          <li>Blender</li>
-          <li>Google AI Studio</li>
-          <li>Stable Diffusion</li>
-          <li>ComfyUI</li>
-          <li>Kling AI</li>
-          <li>Veo 2</li>
-          <li>Photoshop</li>
-        </ul>
       </div>
 
       <!-- Project 3 -->
@@ -813,6 +900,9 @@
         <div class="project-top">
           <svg class="folder-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
           <div class="project-links">
+            <a href="https://github.com/maksym-lysogora/collaba.visual" target="_blank" title="GitHub">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
             <a href="https://collabavisual.com" target="_blank" title="Live site">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 13v6H6V6h6V4H6a2 2 0 00-2 2v13a2 2 0 002 2h13a2 2 0 002-2v-7h-2z"/><path d="M15 3h6v6h-2V6.414l-9.293 9.293-1.414-1.414L17.586 5H15V3z"/></svg>
             </a>
@@ -835,13 +925,13 @@
           <p><strong>Role:</strong> Design & UX, preloader, grid, animations, iterative screenshot-based prompting, QA, deploy.</p>
           <p><strong>Work:</strong> ~40 hours of AI-assisted, human-directed development over one week.</p>
           <div class="project-image-gallery">
-            <img src="media/project_2/p2image1.png" alt="collabavisual.com screenshot">
+            <img src="p2image1.png" alt="collabavisual.com screenshot">
           </div>
           <div class="project-diagram">
             <svg width="680" height="820" viewBox="0 0 680 820" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
               <rect width="680" height="820" fill="#ffffff"/>
               <text x="340" y="32" text-anchor="middle" font-size="14" font-weight="500" fill="#1a1a1a">AI-directed development workflow</text>
-              <text x="340" y="52" text-anchor="middle" font-size="12" fill="#888">collabavisual.com — built with Gemini as code generator</text>
+              <text x="340" y="52" text-anchor="middle" font-size="12" fill="#888">collabavisual.com - built with Gemini as code generator</text>
               <text x="36" y="108" text-anchor="middle" font-size="11" fill="#aaa">Brief</text>
               <text x="36" y="210" text-anchor="middle" font-size="11" fill="#aaa">Input</text>
               <text x="36" y="318" text-anchor="middle" font-size="11" fill="#aaa">Design</text>
@@ -912,15 +1002,6 @@
         </div>
       </div>
 
-      <!-- Project 3 placeholder -->
-      <div class="project-card fade-in" style="border: 1px dashed rgba(100,255,218,0.2); background: transparent;">
-        <div class="project-top">
-          <svg class="folder-icon" style="opacity:0.3" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-        </div>
-        <span class="project-badge" style="opacity:0.5">Coming soon</span>
-        <h3 class="project-title" style="color: var(--slate);">n8n Automation Agent</h3>
-        <p class="project-desc" style="opacity:0.6">Building workflow automation with n8n. In progress.</p>
-      </div>
     </section>
 
     <!-- EXPERIENCE -->
@@ -935,16 +1016,17 @@
           <ul class="exp-desc">
             <li>Built end-to-end LLM pipeline (Twitter agent) from scratch while learning Python and APIs</li>
             <li>Shipped working multi-step agent: Telegram - GPT-4o-mini - self-scoring - Twitter API v2</li>
+            <li>Designed and built Collaba Render, a local node-based AI rendering interface for architectural visualization</li>
             <li>Developed modular architecture: prompt, secrets, memory separated from core logic</li>
           </ul>
           <ul class="tech-list">
-            <li>Python</li><li>OpenAI</li><li>n8n</li><li>Claude Code</li>
+            <li>Python</li><li>JavaScript</li><li>Node.js</li><li>OpenAI</li><li>Gemini</li><li>Claude Code</li>
           </ul>
         </div>
       </div>
 
       <div class="exp-item fade-in">
-        <div class="exp-date">2024 -<br>2026</div>
+        <div class="exp-date">2024 -<br>Present</div>
         <div class="exp-right">
           <h3 class="exp-title">AI-Assisted Visual Producer</h3>
           <p class="exp-company">Freelance - Collaba Visual</p>
@@ -1020,6 +1102,7 @@
             <li>LLM Agents</li>
             <li>Prompt Engineering</li>
             <li>OpenAI API</li>
+            <li>Gemini API</li>
             <li>Claude</li>
             <li>n8n</li>
             <li>Workflow Automation</li>
@@ -1035,12 +1118,17 @@
             <li>Kling AI</li>
             <li>Veo 2</li>
             <li>Google AI Studio</li>
+            <li>AI Image Editing</li>
+            <li>Inpainting</li>
           </ul>
         </div>
         <div class="skill-group fade-in">
           <h4>Technical</h4>
           <ul>
             <li>Python</li>
+            <li>JavaScript</li>
+            <li>Node.js</li>
+            <li>Express</li>
             <li>REST APIs</li>
             <li>JSON</li>
             <li>Telegram Bot API</li>
